@@ -4,7 +4,7 @@ interface Info {
     message: string;
     level: string;
     tags?: {
-        [key: string]: any;
+        [key: string]: string;
     };
     [key: string]: any;
 }
