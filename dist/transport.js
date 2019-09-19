@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
 var Sentry = tslib_1.__importStar(require("@sentry/node"));
-var winston_transport_1 = tslib_1.__importDefault(require("winston-transport"));
+var TransportStream = require("winston-transport");
 var SentryTransport = /** @class */ (function (_super) {
     tslib_1.__extends(SentryTransport, _super);
     function SentryTransport(opts) {
@@ -75,7 +75,7 @@ var SentryTransport = /** @class */ (function (_super) {
         return level === Sentry.Severity.Fatal || level === Sentry.Severity.Error;
     };
     return SentryTransport;
-}(winston_transport_1.default));
+}(TransportStream));
 exports.default = SentryTransport;
 ;
 //# sourceMappingURL=transport.js.map
